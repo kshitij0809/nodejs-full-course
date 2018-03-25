@@ -1,8 +1,20 @@
-const request=require('request');
+const yargs=require('yargs');
 
-request({
-	url:'http://maps.googleapis.com/maps/api/geocode/json?address=arera%20coloney%20bhopal',
-	json:true 
-},(erroe,response,body)=>{
-	console.log(body);
-});
+const geocode=require(./geocode/geocode);
+
+const argv=yargs
+.options({
+	a:{
+		demand:true,
+		alias:'address',
+		describe:'address to fetch weather',
+		string:true
+	}
+})
+.help()
+.alias('help','h')
+.argv;
+
+
+geocode.geocodeAddress(argv.address);
+
