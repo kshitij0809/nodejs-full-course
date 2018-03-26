@@ -33,11 +33,9 @@ var addition= (a,b)=>{
 
 addition(5,9).then((res)=>{
   console.log("success:",res);
-  return addition(res,'99');
-},(errormeassages)=>{
-  console.log("errormeassages",errormeassages);
+  return addition(res,88);
 }).then((res)=>{
   console.log("success:",res);
-},(errormeassages)=>{
-  console.log("errormeassages",errormeassages);
+}).catch((errormeassages)=>{
+	console.log(errormeassages);
 });
