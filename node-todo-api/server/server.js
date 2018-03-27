@@ -1,74 +1,7 @@
-const mongoose=require('mongoose');
+var {mongoose}=require("./db/mongoose.js");
 
 
-mongoose.Promise=global.Promise;
-mongoose.connect('mongodb://localhost:27017/TodoApp');
+var {todo} =require("./models/todo.js");
 
+var {User} =require("./models/user.js");
 
-
-// var todo=mongoose.model('todo',{
-// text:	{
-// 		type:String,
-// 		required:true,
-// 		minlength:1,
-// 		trim:true
-// 	},
-// completed:	{
-// 		type:Boolean,
-// 		default:true
-// 	},
-// completedAt:	{
-// 		type:Number,
-// 		default:100
-// 	}
-// });
-
-
-
-// // var newtodo=new todo({
-// // 	text:"iitr"
-// // });
-
-// // newtodo.save().then((docs)=>{
-// //   console.log("saved doc",docs);
-// // },(e)=>{
-// // 	console.log(e);
-// // });
-
-
-// var otherTodo=new todo({
-// 	   text:true,
-// 	// completed:false,
-// 	// completedAt:120
-// });
-
-// otherTodo.save().then((docs)=>{
-//   console.log(JSON.stringify(docs,undefined,2));
-// },(e)=>{
-// 	console.log(e);
-// });
-
-
-
-var User=mongoose.model('User',{
-email:	{
-		type:String,
-		required:true,
-		minlength:1,
-		trim:true
-	}
-});
-
-
-
-
-
-var user=new User({
-	   email:"kshitijpratap0809@gmail.com"
-});
-
-user.save().then((docs)=>{
-  console.log("saved doc",docs);
-},(e)=>{
-	console.log(e);
-});
