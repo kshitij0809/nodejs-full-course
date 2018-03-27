@@ -1,9 +1,5 @@
 const MongoClient=require('mongodb').MongoClient;
 
-var users={name:"kshitij",age:20};
-var {name}=users;
-console.log(name);		
-
 
 MongoClient.connect("mongodb://localhost:27017/TodoApp",(err,db)=>{
   
@@ -40,6 +36,6 @@ MongoClient.connect("mongodb://localhost:27017/TodoApp",(err,db)=>{
 //   	console.log(result.ops[0]._id);
 //   });
 
-//   db.close();
+  db.close();
  });
 
