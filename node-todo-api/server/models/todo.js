@@ -2,7 +2,7 @@
 
 var mongoose=require("mongoose");
 
-var todo=mongoose.model('todo',{
+var Todo=mongoose.model('Todo',{
 text:	{
 		type:String,
 		required:true,
@@ -32,17 +32,17 @@ completedAt:	{
 // });
 
 
-var otherTodo=new todo({
-	   text:true,
-	// completed:false,
-	// completedAt:120
-});
+// var otherTodo=new todo({
+// 	   text:true,
+// 	// completed:false,
+// 	// completedAt:120
+// });
 
-otherTodo.save().then((docs)=>{
-  console.log(JSON.stringify(docs,undefined,2));
-},(e)=>{
-	console.log(e);
-});
+// otherTodo.save().then((docs)=>{
+//   console.log(JSON.stringify(docs,undefined,2));
+// },(e)=>{
+// 	console.log(e);
+// });
 
 
-module.exports={todo}; 
+module.exports={Todo}; 

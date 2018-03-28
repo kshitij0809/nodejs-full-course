@@ -17,14 +17,14 @@ email:	{
 
 
 
-var user=new User({
-	   email:"kshitijpratap0809@gmail.com"
-});
+// var user=new User({
+// 	   email:"kshitijpratap0809@gmail.com"
+// });
 
-user.save().then((docs)=>{
-  console.log("saved doc",docs);
-},(e)=>{
-	console.log(e);
-});
+// user.save().then((docs)=>{
+//   console.log("saved doc",docs);
+// },(e)=>{
+// 	console.log(e);
+// });
 
 module.exports={User}; 
