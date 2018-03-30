@@ -2,7 +2,7 @@ const expect = require("expect");
 
 const request = require("supertest");
 
-const {app}=require('./../sever.js');
+const {app}=require('./../server.js');
 const {Todo}=require('./../models/todo.js');
 
 
@@ -29,10 +29,10 @@ describe('POST /todos',()=>{
 			}
 			Todo.find().then((todos)=>{
 				expect(todos.length).toBe(1);
-			    expect(todos[0].text).toBe.(text);
+			    expect(todos[0].text).toBe(text);
 			    done();
 			}).catch((e)=>done(e));
-		})
+		});
 		
 	});
 
@@ -51,10 +51,17 @@ describe('POST /todos',()=>{
 
 			
 			Todo.find().then((todos)=>{
-				expect(todos.length).toBe(1);
+				expect(todos.length).toBe(0);
 			    done();
 			}).catch((e)=>done(e));
-		})
+		});
 		
 	});
 });
+
+
+
+
+
+
+
