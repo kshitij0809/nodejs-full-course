@@ -10,6 +10,10 @@
   "engines":{
     "node":"10.0.0"
   },
+   "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "description": "",
